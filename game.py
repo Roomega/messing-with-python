@@ -1,201 +1,217 @@
+
 #Testing games
-
-print(
-"""
-("-")
- /|/
-_|_|______
-""")
-movement = ("2")
-
-while True:
-    movement3 = input("""
--------------------------------------------------------------
-[1] Direita
-[2] Esquerda
-[3] Saltar
+print("Bem Vindo ao jogo mais simples do mundo.\n")
+start2 = 1
+while start2 == 0 or start2 == 1:
+    start = input("""\n
+----------------------------------------------------------------\n
+[A] Start
+[B] Exit\n
+----------------------------------------------------------------
 \n""")
-    if movement3 == ("1") and movement != ("1") and movement != ("3") and movement != ("5") and movement != ("4"):
-        movement = ("1")
-        print("""
-     ("-")
-      /|/
-______|_|______
-    """)
-
-    elif movement3 == ("2") and movement == ("1"):
+    if start == ("A") or start == ("a"):
         movement = ("2")
         print(
-"""
-("-")
- /|/
-_|_|______
-""")
-    elif movement3 == ("2") and movement == ("2") :
-        movement = ("2")
-        print("Este movimento é impossível.")
-
-    elif movement3 == ("1") and movement == ("1"):
-        movement = ("3")
-        print("""
-            ("-")
-             /|/
-_____________|_|__________
-                          |
-                          |
+        """
+        ("-")
+         /|/
+_________|_|______
         """)
 
-    elif movement3 == ("2") and movement == ("3"):
-         movement = ("1")
-         print("""
-     ("-")
-      /|/
-______|_|________________
-                         |
-                         |
-    """)
-    elif movement3 == ("1") and movement == ("3"):
-        movement = ("4")
-        print("""
-                     ("-")
-                      /|/
-______________________|_|_         __________
-                          |       |
-                          |       |
+        while True:
+            movement3 = input("""
+ ----------------------------------------------------------------
+|    [1] Direita                                                 |
+|    [2] Esquerda                                                |
+|    [3] Saltar                                                  |
+ ----------------------------------------------------------------
+        \n""")
+            if movement3 == ("1") and movement != ("1") and movement != ("3") and movement != ("5") and movement != ("4"):
+                movement = ("1")
+                print("""
+             ("-")
+              /|/
+______________|_|______
+            """)
+
+            elif movement3 == ("2") and movement == ("1"):
+                movement = ("2")
+                print(
+        """
+        ("-")
+         /|/
+_________|_|______
         """)
-    elif movement3 == ("2") and movement == ("4"):
-        movement = ("3")
-        print("""
-            ("-")
-             /|/
-_____________|_|__________
-                          |
-                          |
-        """)
-    elif movement3 == ("1") and movement == ("4"):
-        print("""
+            elif movement3 == ("2") and movement == ("2") :
+                movement = ("2")
+                print("Este movimento é impossível.")
+
+            elif movement3 == ("1") and movement == ("1"):
+                movement = ("3")
+                print("""
+                    ("-")
+                     /|/
+_____________________|_|__________
+                                  |
+                                  |
+                """)
+
+            elif movement3 == ("2") and movement == ("3"):
+                 movement = ("1")
+                 print("""
+             ("-")
+              /|/
+______________|_|________________
+                                 |
+                                 |
+            """)
+            elif movement3 == ("1") and movement == ("3"):
+                movement = ("4")
+                print("""
+                             ("-")
+                              /|/
+______________________________|_|_         __________
+                                  |       |
+                                  |       |
+                """)
+            elif movement3 == ("2") and movement == ("4"):
+                movement = ("3")
+                print("""
+                    ("-")
+                     /|/
+_____________________|_|__________
+                                  |
+                                  |
+                """)
+            elif movement3 == ("1") and movement == ("4"):
+                print("""
                             
                       
-__________________________         __________
-                          | ("-") |
-                          |  /|/  |
-                          |  | |  |
-
-Você Morreu.
-        """)
-        break
+__________________________________         __________
+                                  | ("-") |
+                                  |  /|/  |
+                                  |  | |  |
+                                  |/\_/\_/|
+        Você Morreu.
+                """)
+                break
         
 
-    elif movement3 == ("3") and movement == ("4"):
-        movement = ("5")
-        print("""
-                            ("-")
-                             /|/
-                             | |
-__________________________         __________
-                          |       |
-                          |       |
-                          |       |
+            elif movement3 == ("3") and movement == ("4"):
+                movement = ("5")
+                print("""
+                                    ("-")
+                                     /|/
+                                     | |
+__________________________________         __________
+                                  |       |
+                                  |       |
+                                  |       |
         
-        """)
-        print("""
-                                               ___
-                                   ("-")      |___|
-                                    /|/       |
-__________________________         _|_|_______|______
-                          |       |
-                          |       |
-        """)
-    elif movement3 == ("2") and movement == ("5"):
-        print("""
+                """)
+                print("""
+                                                       ___
+                                           ("-")      |___|
+                                            /|/       |
+__________________________________         _|_|_______|______
+                                  |       |
+                                  |       |
+                """)
+            elif movement3 == ("2") and movement == ("5"):
+                print("""
                             
                       
-__________________________         __________
-                          | ("-") |
-                          |  /|/  |
-                          |  | |  |
+__________________________________         __________
+                                  | ("-") |
+                                  |  /|/  |
+                                  |  | |  |
+                                  |/\_/\_/|
+        Você Morreu.
+                """)
+                break
 
-Você Morreu.
-        """)
-        break
+            elif movement3 == ("1") and movement == ("5"):
+                movement = ("6")
+                print("""
+                                                       ___
+                                                      |___|  ("-")      
+                                                      |       /|/
+__________________________________         ___________|_______|_|
+                                  |       |
+                                  |       |
 
-    elif movement3 == ("1") and movement == ("5"):
-        movement = ("6")
-        print("""
-                                               ___
-                                              |___|  ("-")      
-                                              |       /|/
-__________________________         ___________|_______|_|
-                          |       |
-                          |       |
+                """)
+                print("Você Venceu!")
+                break
 
-        """)
-        print("Você Venceu!")
-        break
-
-    elif movement3 == ("3") and movement == ("1"):
-        print("""
-     ("-")
-      /|/
-      |_|
+            elif movement3 == ("3") and movement == ("1"):
+                print("""
+             ("-")
+              /|/
+              |_|
       
-_______________
-    """)
-        print("""
-     ("-")
-      /|/
-______|_|______
-    """)
-    elif movement3 == ("3") and movement == ("2"):
-        print("""
-("-")
- /|/
- |_|
+______________________
+            """)
+                print("""
+             ("-")
+              /|/
+______________|_|______
+            """)
+            elif movement3 == ("3") and movement == ("2"):
+                print("""
+        ("-")
+         /|/
+         | |
       
-_______________
-    """)
-        print(
-"""
-("-")
- /|/
-_|_|______
-""")
-    elif movement3 == ("3") and movement == ("3"):
-        print("""
-            ("-")
-             /|/
-             |_|
+______________________
+            """)
+                print(
+        """
+        ("-")
+         /|/
+_________|_|______
+        """)
+            elif movement3 == ("3") and movement == ("3"):
+                print("""
+                    ("-")
+                     /|/
+                     |_|
              
-__________________________
-                          |
-                          |
-        """)
-        print("""
-            ("-")
-             /|/
-_____________|_|__________
-                          |
-                          |
-        """)
+__________________________________
+                                  |
+                                  |
+                """)
+                print("""
+                    ("-")
+                     /|/
+_____________________|_|__________
+                                  |
+                                  |
+                """)
 
-    elif movement3 == ("3") and movement == ("5"):
-        print("""
-                                   ("-")  
-                                    /|/        ___
-                                    |_|       |___|
-                                              |
-__________________________         ___________|______
-                          |       |
-                          |       |
-        """)
-        print("""
-                                               ___
-                                   ("-")      |___|
-                                    /|/       |
-__________________________         _|_|_______|______
-                          |       |
-                          |       |
-        """)
+            elif movement3 == ("3") and movement == ("5"):
+                print("""
+                                           ("-")  
+                                            /|/        ___
+                                            |_|       |___|
+                                                      |
+__________________________________         ___________|______
+                                  |       |
+                                  |       |
+                """)
+                print("""
+                                                       ___
+                                           ("-")      |___|
+                                            /|/       |
+__________________________________         _|_|_______|______
+                                  |       |
+                                  |       |
+                """)
 
-    else: 
-        print("Este movimento é impossível.")
+            else: 
+                print("Este movimento é impossível.")
+    elif start == ("B") or start == ("b"):
+        exit()
+    else:
+        start2 = 0
+        print("Esta escolha é inválida.")
